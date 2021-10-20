@@ -14,6 +14,7 @@ class LocationViewController: UIViewController {
         let mapView = MKMapView()
         mapView.showsUserLocation = true
         mapView.translatesAutoresizingMaskIntoConstraints = false
+        mapView.delegate = self
         return mapView
     }()
     
@@ -56,6 +57,10 @@ class LocationViewController: UIViewController {
             self?.zoom(to: location, with: meters)
             self?.dropPin(on: location)
         }
+        
+        viewModel.didAccessProfile = { [weak self] name in
+            self?.presentProfileView(name)
+        }
     }
     
     private func zoom(to location: CLLocation, with meters: CLLocationDistance) {
@@ -75,5 +80,15 @@ class LocationViewController: UIViewController {
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         mapView.addAnnotation(annotation)
+    }
+    
+    private func presentProfileView(_ name: String) {
+        print("**** \(name)")
+    }
+}
+
+extension LocationViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        viewModel.accessProfile()
     }
 }

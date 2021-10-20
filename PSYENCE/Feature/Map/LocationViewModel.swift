@@ -11,6 +11,7 @@ import CoreLocation
 final class LocationViewModel: LocationViewModelType {
     
     var didFindLocation: ((CLLocation, CLLocationDistance) -> Void)?
+    var didAccessProfile: ((String) -> Void)?
     
     private let locationDistance: CLLocationDistance = 1000
     
@@ -28,5 +29,10 @@ final class LocationViewModel: LocationViewModelType {
             let longitude = user.locationDetails?.longitude else { return }
         let location = CLLocation(latitude: latitude, longitude: longitude)
         self.didFindLocation?(location, locationDistance)
+    }
+    
+    func accessProfile() {
+        let name = self.user.name ?? "N/A"
+        self.didAccessProfile?(name)
     }
 }
