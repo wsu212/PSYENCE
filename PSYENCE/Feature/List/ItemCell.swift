@@ -79,8 +79,8 @@ class ItemCell: UITableViewCell {
         
         itemImageView.load(url: url) { _ in }
         
-        if let latitude = item?.locationDetails?.latitude, let longitude = item?.locationDetails?.longitude {
-            print("#### \(latitude), \(longitude)")
+        if let user = item?.user, let locationDetails = item?.user?.locationDetails {
+            print("#### \(user), \(locationDetails)")
         }
     }
 }

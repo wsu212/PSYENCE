@@ -17,5 +17,6 @@ protocol Item {
     var name: String? { get }
     var description: String? { get }
     var imageURL: URL? { get }
-    var locationDetails: LocationDetails? { get } // LocationDetails should be in Foundation
+    
+    var user: Staff? { get }
 }

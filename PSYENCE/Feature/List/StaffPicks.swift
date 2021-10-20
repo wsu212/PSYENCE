@@ -53,6 +53,12 @@ struct Staff: Decodable {
     var locationDetails: LocationDetails?
     
     enum CodingKeys: String, CodingKey {
+        case uri
+        case name
+        case link
+        case location
+        case bio
+        case pictures
         case locationDetails = "location_details"
     }
 }
@@ -83,10 +89,6 @@ extension Video: Item {
     var imageURL: URL? {
         guard let urlString = self.pictures?.sizes?.last?.link else { return nil }
         return .init(string: urlString)
-    }
-    
-    var locationDetails: LocationDetails? {
-        return user?.locationDetails
     }
 }
 
