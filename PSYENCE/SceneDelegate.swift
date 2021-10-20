@@ -15,7 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = .init(windowScene: scene)
-        let navigationController: UINavigationController = .init(rootViewController: ListViewController())
+        let service = ListService<StaffPicks>(endpoint: .staffpicks)
+        let viewModel = ListViewModel(title: "Images Feed", service: service)
+        let viewController = ListViewController(viewModel: viewModel)
+        let navigationController: UINavigationController = .init(rootViewController: viewController)
         window?.rootViewController = navigationController
         
         window?.makeKeyAndVisible()
