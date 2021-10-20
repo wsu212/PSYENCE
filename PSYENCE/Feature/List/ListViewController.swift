@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ListViewControllerDelegate: AnyObject {
+    func userDidTapPhotoTaken(by user: Staff)
+}
+
 class ListViewController: UIViewController {
 
     private lazy var tableView: UITableView = {
@@ -23,6 +27,8 @@ class ListViewController: UIViewController {
     }()
     
     private var viewModel: ListViewModelType
+    
+    weak var delegate: ListViewControllerDelegate?
     
     // MARK: - Initializer
     
@@ -113,9 +119,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let user = viewModel.item(at: indexPath.row)?.user {
-            let viewModel = LocationViewModel(user: user)
-            let viewController = LocationViewController(viewModel: viewModel)
-            self.navigationController?.pushViewController(viewController, animated: true)
+            self.delegate?.userDidTapPhotoTaken(by: user)
         }
     }
 }

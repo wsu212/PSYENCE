@@ -8,6 +8,10 @@
 import UIKit
 import MapKit
 
+protocol LocationViewControllerDelegate: AnyObject {
+    func userDidTapAnnotation(user: Staff)
+}
+
 class LocationViewController: UIViewController {
     
     private lazy var mapView: MKMapView = {
@@ -19,6 +23,8 @@ class LocationViewController: UIViewController {
     }()
     
     private var viewModel: LocationViewModelType
+    
+    weak var delegate: LocationViewControllerDelegate?
     
     // MARK: - Initializer
         
@@ -58,8 +64,8 @@ class LocationViewController: UIViewController {
             self?.dropPin(on: location)
         }
         
-        viewModel.didAccessProfile = { [weak self] name in
-            self?.presentProfileView(name)
+        viewModel.didAccessProfile = { [weak self] user in
+            self?.delegate?.userDidTapAnnotation(user: user)
         }
     }
     
@@ -80,10 +86,6 @@ class LocationViewController: UIViewController {
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         mapView.addAnnotation(annotation)
-    }
-    
-    private func presentProfileView(_ name: String) {
-        print("**** \(name)")
     }
 }
 

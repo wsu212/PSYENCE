@@ -10,7 +10,7 @@ import Foundation
 
 protocol LocationViewModelType {
     var didFindLocation: ((CLLocation, CLLocationDistance) -> Void)? { get set }
-    var didAccessProfile: ((String) -> Void)? { get set }
+    var didAccessProfile: ((Staff) -> Void)? { get set }
     func findLocation()
     func accessProfile()
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		046E2537272091B30006ACCA /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E2536272091B30006ACCA /* LocationViewModel.swift */; };
 		046E253927209F440006ACCA /* LocationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E253827209F440006ACCA /* LocationViewModelType.swift */; };
+		046E253B2720B5180006ACCA /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E253A2720B5180006ACCA /* FlowCoordinator.swift */; };
 		04A072D5271F817A009712F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A072D4271F817A009712F7 /* AppDelegate.swift */; };
 		04A072D7271F817A009712F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A072D6271F817A009712F7 /* SceneDelegate.swift */; };
 		04A072DE271F817B009712F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A072DD271F817B009712F7 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		046E2536272091B30006ACCA /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		046E253827209F440006ACCA /* LocationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModelType.swift; sourceTree = "<group>"; };
+		046E253A2720B5180006ACCA /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		04A072D1271F8179009712F7 /* PSYENCE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSYENCE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A072D4271F817A009712F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A072D6271F817A009712F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				04B91D2327206C750096BAE6 /* List */,
 				04B91D2827206C750096BAE6 /* Map */,
+				046E253A2720B5180006ACCA /* FlowCoordinator.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				04B91D2927206C750096BAE6 /* ListViewController.swift in Sources */,
 				04B91D14272066160096BAE6 /* ListViewModelType.swift in Sources */,
 				04B91D2B27206C750096BAE6 /* StaffPicks.swift in Sources */,
+				046E253B2720B5180006ACCA /* FlowCoordinator.swift in Sources */,
 				046E2537272091B30006ACCA /* LocationViewModel.swift in Sources */,
 				04A072D7271F817A009712F7 /* SceneDelegate.swift in Sources */,
 				04B91D16272066160096BAE6 /* List.swift in Sources */,

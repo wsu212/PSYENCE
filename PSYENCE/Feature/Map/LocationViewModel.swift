@@ -11,7 +11,7 @@ import CoreLocation
 final class LocationViewModel: LocationViewModelType {
     
     var didFindLocation: ((CLLocation, CLLocationDistance) -> Void)?
-    var didAccessProfile: ((String) -> Void)?
+    var didAccessProfile: ((Staff) -> Void)?
     
     private let locationDistance: CLLocationDistance = 1000
     
@@ -32,7 +32,6 @@ final class LocationViewModel: LocationViewModelType {
     }
     
     func accessProfile() {
-        let name = self.user.name ?? "N/A"
-        self.didAccessProfile?(name)
+        self.didAccessProfile?(user)
     }
 }
