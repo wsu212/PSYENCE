@@ -15,6 +15,13 @@
 		04A072EC271F817B009712F7 /* PSYENCETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A072EB271F817B009712F7 /* PSYENCETests.swift */; };
 		04A072F6271F817B009712F7 /* PSYENCEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A072F5271F817B009712F7 /* PSYENCEUITests.swift */; };
 		04A072F8271F817B009712F7 /* PSYENCEUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A072F7271F817B009712F7 /* PSYENCEUITestsLaunchTests.swift */; };
+		04B91D00272065140096BAE6 /* StaffPicks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91CFF272065140096BAE6 /* StaffPicks.swift */; };
+		04B91D12272066160096BAE6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D0C272066160096BAE6 /* UIView+Extensions.swift */; };
+		04B91D13272066160096BAE6 /* ListServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D0D272066160096BAE6 /* ListServiceType.swift */; };
+		04B91D14272066160096BAE6 /* ListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D0E272066160096BAE6 /* ListViewModelType.swift */; };
+		04B91D15272066160096BAE6 /* CellPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D0F272066160096BAE6 /* CellPresentable.swift */; };
+		04B91D16272066160096BAE6 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D10272066160096BAE6 /* List.swift */; };
+		04B91D17272066160096BAE6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D11272066160096BAE6 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		04A072F1271F817B009712F7 /* PSYENCEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSYENCEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A072F5271F817B009712F7 /* PSYENCEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSYENCEUITests.swift; sourceTree = "<group>"; };
 		04A072F7271F817B009712F7 /* PSYENCEUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSYENCEUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04B91CFF272065140096BAE6 /* StaffPicks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffPicks.swift; sourceTree = "<group>"; };
+		04B91D0C272066160096BAE6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		04B91D0D272066160096BAE6 /* ListServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListServiceType.swift; sourceTree = "<group>"; };
+		04B91D0E272066160096BAE6 /* ListViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModelType.swift; sourceTree = "<group>"; };
+		04B91D0F272066160096BAE6 /* CellPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellPresentable.swift; sourceTree = "<group>"; };
+		04B91D10272066160096BAE6 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		04B91D11272066160096BAE6 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,8 @@
 				04A072D4271F817A009712F7 /* AppDelegate.swift */,
 				04A072D6271F817A009712F7 /* SceneDelegate.swift */,
 				04A072D8271F817A009712F7 /* ViewController.swift */,
+				04B91CFF272065140096BAE6 /* StaffPicks.swift */,
+				04B91D0B272066160096BAE6 /* Foundation */,
 				04A072DD271F817B009712F7 /* Assets.xcassets */,
 				04A072DF271F817B009712F7 /* LaunchScreen.storyboard */,
 				04A072E2271F817B009712F7 /* Info.plist */,
@@ -122,6 +138,19 @@
 				04A072F7271F817B009712F7 /* PSYENCEUITestsLaunchTests.swift */,
 			);
 			path = PSYENCEUITests;
+			sourceTree = "<group>";
+		};
+		04B91D0B272066160096BAE6 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				04B91D0C272066160096BAE6 /* UIView+Extensions.swift */,
+				04B91D0D272066160096BAE6 /* ListServiceType.swift */,
+				04B91D0E272066160096BAE6 /* ListViewModelType.swift */,
+				04B91D0F272066160096BAE6 /* CellPresentable.swift */,
+				04B91D10272066160096BAE6 /* List.swift */,
+				04B91D11272066160096BAE6 /* Endpoint.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +284,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A072D9271F817A009712F7 /* ViewController.swift in Sources */,
+				04B91D00272065140096BAE6 /* StaffPicks.swift in Sources */,
+				04B91D12272066160096BAE6 /* UIView+Extensions.swift in Sources */,
+				04B91D13272066160096BAE6 /* ListServiceType.swift in Sources */,
+				04B91D17272066160096BAE6 /* Endpoint.swift in Sources */,
 				04A072D5271F817A009712F7 /* AppDelegate.swift in Sources */,
+				04B91D15272066160096BAE6 /* CellPresentable.swift in Sources */,
+				04B91D14272066160096BAE6 /* ListViewModelType.swift in Sources */,
 				04A072D7271F817A009712F7 /* SceneDelegate.swift in Sources */,
+				04B91D16272066160096BAE6 /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
