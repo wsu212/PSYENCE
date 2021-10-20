@@ -16,8 +16,13 @@ class LocationViewController: UIViewController {
         mapView.translatesAutoresizingMaskIntoConstraints = false
         return mapView
     }()
+    
+    private var viewModel: LocationViewModelType
+    
+    // MARK: - Initializer
         
-    init() {
+    init(viewModel: LocationViewModelType) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -25,22 +30,50 @@ class LocationViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - View Life Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSubviews()
-        createConstraints()
+        configureSubviews()
+        configureConstraints()
+        configureBindings()
+        
+        viewModel.findLocation()
     }
     
-    private func setupSubviews() {
+    // MARK: - Private Helper Methods
+    
+    private func configureSubviews() {
         view.addSubview(mapView)
     }
     
-    private func createConstraints() {
-        NSLayoutConstraint.activate([
-            mapView.topAnchor.constraint(equalTo: view.topAnchor),
-            mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
+    private func configureConstraints() {
+        mapView.pin(to: view)
+    }
+    
+    private func configureBindings() {
+        viewModel.didFindLocation = { [weak self] location, meters in
+            self?.zoom(to: location, with: meters)
+            self?.dropPin(on: location)
+        }
+    }
+    
+    private func zoom(to location: CLLocation, with meters: CLLocationDistance) {
+        let viewRegion = MKCoordinateRegion(
+            center: location.coordinate,
+            latitudinalMeters: meters,
+            longitudinalMeters: meters
+        )
+        mapView.setRegion(viewRegion, animated: true)
+    }
+    
+    private func dropPin(on location: CLLocation) {
+        let coordinate: CLLocationCoordinate2D = .init(
+            latitude: location.coordinate.latitude,
+            longitude: location.coordinate.longitude
+        )
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        mapView.addAnnotation(annotation)
     }
 }

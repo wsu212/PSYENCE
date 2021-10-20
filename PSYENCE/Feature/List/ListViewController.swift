@@ -59,12 +59,7 @@ class ListViewController: UIViewController {
     }
     
     private func configureConstraints() {
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
+        tableView.pin(to: view)
     }
     
     private func configureBindings() {
@@ -117,8 +112,9 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let item = viewModel.item(at: indexPath.row) {
-            let viewController = LocationViewController()
+        if let user = viewModel.item(at: indexPath.row)?.user {
+            let viewModel = LocationViewModel(user: user)
+            let viewController = LocationViewController(viewModel: viewModel)
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }

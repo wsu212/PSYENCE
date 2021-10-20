@@ -78,9 +78,5 @@ class ItemCell: UITableViewCell {
         guard let url = item?.imageURL else { return }
         
         itemImageView.load(url: url) { _ in }
-        
-        if let user = item?.user, let locationDetails = item?.user?.locationDetails {
-            print("#### \(user), \(locationDetails)")
-        }
     }
 }
