@@ -115,6 +115,13 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
             viewModel.getList()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let item = viewModel.item(at: indexPath.row) {
+            let viewController = LocationViewController()
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 }
 
 

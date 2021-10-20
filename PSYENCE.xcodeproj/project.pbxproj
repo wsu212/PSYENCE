@@ -20,10 +20,11 @@
 		04B91D15272066160096BAE6 /* CellPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D0F272066160096BAE6 /* CellPresentable.swift */; };
 		04B91D16272066160096BAE6 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D10272066160096BAE6 /* List.swift */; };
 		04B91D17272066160096BAE6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D11272066160096BAE6 /* Endpoint.swift */; };
-		04B91D1B2720665F0096BAE6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D192720665F0096BAE6 /* ListViewController.swift */; };
-		04B91D1C2720665F0096BAE6 /* StaffPicks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D1A2720665F0096BAE6 /* StaffPicks.swift */; };
-		04B91D1E272066B60096BAE6 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D1D272066B60096BAE6 /* ListViewModel.swift */; };
-		04B91D20272066D30096BAE6 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D1F272066D30096BAE6 /* ItemCell.swift */; };
+		04B91D2927206C750096BAE6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D2427206C750096BAE6 /* ListViewController.swift */; };
+		04B91D2A27206C750096BAE6 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D2527206C750096BAE6 /* ItemCell.swift */; };
+		04B91D2B27206C750096BAE6 /* StaffPicks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D2627206C750096BAE6 /* StaffPicks.swift */; };
+		04B91D2C27206C750096BAE6 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D2727206C750096BAE6 /* ListViewModel.swift */; };
+		04B91D2E27206C900096BAE6 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D2D27206C900096BAE6 /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +62,11 @@
 		04B91D0F272066160096BAE6 /* CellPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellPresentable.swift; sourceTree = "<group>"; };
 		04B91D10272066160096BAE6 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		04B91D11272066160096BAE6 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		04B91D192720665F0096BAE6 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		04B91D1A2720665F0096BAE6 /* StaffPicks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffPicks.swift; sourceTree = "<group>"; };
-		04B91D1D272066B60096BAE6 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
-		04B91D1F272066D30096BAE6 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		04B91D2427206C750096BAE6 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		04B91D2527206C750096BAE6 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		04B91D2627206C750096BAE6 /* StaffPicks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffPicks.swift; sourceTree = "<group>"; };
+		04B91D2727206C750096BAE6 /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		04B91D2D27206C900096BAE6 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,12 +161,29 @@
 		04B91D182720665F0096BAE6 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				04B91D192720665F0096BAE6 /* ListViewController.swift */,
-				04B91D1D272066B60096BAE6 /* ListViewModel.swift */,
-				04B91D1F272066D30096BAE6 /* ItemCell.swift */,
-				04B91D1A2720665F0096BAE6 /* StaffPicks.swift */,
+				04B91D2327206C750096BAE6 /* List */,
+				04B91D2827206C750096BAE6 /* Map */,
 			);
 			path = Feature;
+			sourceTree = "<group>";
+		};
+		04B91D2327206C750096BAE6 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				04B91D2427206C750096BAE6 /* ListViewController.swift */,
+				04B91D2527206C750096BAE6 /* ItemCell.swift */,
+				04B91D2627206C750096BAE6 /* StaffPicks.swift */,
+				04B91D2727206C750096BAE6 /* ListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		04B91D2827206C750096BAE6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				04B91D2D27206C900096BAE6 /* LocationViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,17 +317,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B91D12272066160096BAE6 /* UIView+Extensions.swift in Sources */,
-				04B91D1C2720665F0096BAE6 /* StaffPicks.swift in Sources */,
 				04B91D13272066160096BAE6 /* ListServiceType.swift in Sources */,
+				04B91D2C27206C750096BAE6 /* ListViewModel.swift in Sources */,
 				04B91D17272066160096BAE6 /* Endpoint.swift in Sources */,
-				04B91D1B2720665F0096BAE6 /* ListViewController.swift in Sources */,
 				04A072D5271F817A009712F7 /* AppDelegate.swift in Sources */,
+				04B91D2A27206C750096BAE6 /* ItemCell.swift in Sources */,
 				04B91D15272066160096BAE6 /* CellPresentable.swift in Sources */,
+				04B91D2E27206C900096BAE6 /* LocationViewController.swift in Sources */,
+				04B91D2927206C750096BAE6 /* ListViewController.swift in Sources */,
 				04B91D14272066160096BAE6 /* ListViewModelType.swift in Sources */,
-				04B91D20272066D30096BAE6 /* ItemCell.swift in Sources */,
+				04B91D2B27206C750096BAE6 /* StaffPicks.swift in Sources */,
 				04A072D7271F817A009712F7 /* SceneDelegate.swift in Sources */,
 				04B91D16272066160096BAE6 /* List.swift in Sources */,
-				04B91D1E272066B60096BAE6 /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
