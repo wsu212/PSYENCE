@@ -13,14 +13,14 @@ final class ProfileViewController: UIViewController {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.apply(appearance: appearance.titleAppearance)
-        label.text = author.name
+        label.text = profile.name
         return label
     }()
     
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.apply(appearance: appearance.subtitleAppearance)
-        label.text = author.bio
+        label.text = profile.bio
         return label
     }()
     
@@ -41,13 +41,13 @@ final class ProfileViewController: UIViewController {
         return stackView
     }()
     
-    let author: Author
+    let profile: Profile
     let appearance: ViewPresentable
     
     // MARK: - Initializer
     
-    init(author: Author, appearance: ViewPresentable) {
-        self.author = author
+    init(profile: Profile, appearance: ViewPresentable) {
+        self.profile = profile
         self.appearance = appearance
         super.init(nibName: nil, bundle: nil)
     }
@@ -73,7 +73,7 @@ final class ProfileViewController: UIViewController {
         }
         view.addSubview(verticalStackView)
         
-        if let url = author.pictures?.imageURL {
+        if let url = profile.imageURL {
             profileImageView.load(url: url, completion: nil)
         }
     }

@@ -28,30 +28,30 @@ final class FlowCoordinator {
         return viewController
     }
     
-    private func makeLocationViewController(author: Author) -> LocationViewController {
-        let viewModel = LocationViewModel(author: author)
+    private func makeLocationViewController(item: Item) -> LocationViewController {
+        let viewModel = LocationViewModel(item: item)
         let viewController = LocationViewController(viewModel: viewModel)
         viewController.delegate = self
         return viewController
     }
     
-    private func makeProfileViewController(author: Author) -> ProfileViewController {
+    private func makeProfileViewController(profile: Profile) -> ProfileViewController {
         let appearance = ProfileViewAppearance(titleAppearance: .profileTitle, subtitleAppearance: .profileSubtitle)
-        let viewController = ProfileViewController(author: author, appearance: appearance)
+        let viewController = ProfileViewController(profile: profile, appearance: appearance)
         return viewController
     }
 }
 
 extension FlowCoordinator: ListViewControllerDelegate {
-    func userDidTapPhotoTaken(by author: Author) {
-        let vc = makeLocationViewController(author: author)
-        navigationController?.pushViewController(vc, animated: true)
+    func userDidTapItem(_ item: Item) {
+        let viewController = makeLocationViewController(item: item)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
 extension FlowCoordinator: LocationViewControllerDelegate {
-    func userDidTapAnnotation(author: Author) {
-        let vc = makeProfileViewController(author: author)
+    func userDidTapAnnotation(_ profile: Profile) {
+        let vc = makeProfileViewController(profile: profile)
         navigationController?.present(vc, animated: true, completion: nil)
     }
 }

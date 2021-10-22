@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ListViewControllerDelegate: AnyObject {
-    func userDidTapPhotoTaken(by author: Author)
+    func userDidTapItem(_ item: Item)
 }
 
 class ListViewController: UIViewController {
@@ -115,8 +115,8 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let author = viewModel.item(at: indexPath.row)?.author {
-            self.delegate?.userDidTapPhotoTaken(by: author)
+        if let item = viewModel.item(at: indexPath.row) {
+            self.delegate?.userDidTapItem(item)
         }
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 
 protocol LocationViewControllerDelegate: AnyObject {
-    func userDidTapAnnotation(author: Author)
+    func userDidTapAnnotation(_ profile: Profile)
 }
 
 class LocationViewController: UIViewController {
@@ -60,8 +60,8 @@ class LocationViewController: UIViewController {
             self?.dropPin(on: location)
         }
         
-        viewModel.didAccessProfile = { [weak self] author in
-            self?.delegate?.userDidTapAnnotation(author: author)
+        viewModel.didAccessProfile = { [weak self] profile in
+            self?.delegate?.userDidTapAnnotation(profile)
         }
     }
     

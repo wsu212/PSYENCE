@@ -69,7 +69,7 @@ class ItemCell: UITableViewCell {
             ])
     }
     
-    func configure<T: ViewPresentable>(with item: Item?, appearance: T) {
+    func configure(with item: Item?, appearance: ViewPresentable) {
         titleLabel.apply(appearance: appearance.titleAppearance)
         subtitleLabel.apply(appearance: appearance.subtitleAppearance)
         titleLabel.text = item?.name

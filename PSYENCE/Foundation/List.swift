@@ -17,7 +17,15 @@ protocol Item {
     var name: String? { get }
     var description: String? { get }
     var imageURL: URL? { get }
-    
-    var author: Author? { get }
+    var profile: Profile? { get }
+    var isValid: Bool { get }
+}
+
+protocol Profile {
+    var imageURL: URL? { get }
+    var name: String? { get }
+    var bio: String? { get }
+    var latitude: Double? { get }
+    var longitude: Double? { get }
     var isValid: Bool { get }
 }

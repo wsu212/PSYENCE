@@ -90,15 +90,12 @@ extension Video: Item {
         return pictures?.imageURL
     }
     
-    var author: Author? {
+    var profile: Profile? {
         user
     }
     
     var isValid: Bool {
-        guard let locationDetails = user?.locationDetails else {
-            return false
-        }
-        return locationDetails.latitude != nil && locationDetails.longitude != nil
+        return profile?.isValid ?? false
     }
 }
 
@@ -116,5 +113,23 @@ extension Pictures {
     var imageURL: URL? {
         guard let urlString = sizes?.last?.link else { return nil }
         return .init(string: urlString)
+    }
+}
+
+extension Author: Profile {
+    var imageURL: URL? {
+        pictures?.imageURL
+    }
+    
+    var latitude: Double? {
+        locationDetails?.latitude
+    }
+    
+    var longitude: Double? {
+        locationDetails?.longitude
+    }
+    
+    var isValid: Bool {
+        return locationDetails?.latitude != nil && locationDetails?.longitude != nil
     }
 }

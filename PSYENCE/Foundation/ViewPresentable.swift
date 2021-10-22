@@ -50,9 +50,10 @@ enum LabelAppearance {
     
     var numberOfLines: Int {
         switch self {
-        case .title, .profileTitle, .profileSubtitle: return 0
+        case .title, .profileTitle: return 0
         case .header: return 1
         case .subtitle: return 2
+        case .profileSubtitle: return 3
         }
     }
 }

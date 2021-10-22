@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040A2FE22723021F00740A5F /* StaffPicks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A2FE12723021F00740A5F /* StaffPicks.swift */; };
 		046E2537272091B30006ACCA /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E2536272091B30006ACCA /* LocationViewModel.swift */; };
 		046E253927209F440006ACCA /* LocationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E253827209F440006ACCA /* LocationViewModelType.swift */; };
 		046E253B2720B5180006ACCA /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E253A2720B5180006ACCA /* FlowCoordinator.swift */; };
@@ -26,7 +27,6 @@
 		04B91D17272066160096BAE6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D11272066160096BAE6 /* Endpoint.swift */; };
 		04B91D2927206C750096BAE6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D2427206C750096BAE6 /* ListViewController.swift */; };
 		04B91D2A27206C750096BAE6 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D2527206C750096BAE6 /* ItemCell.swift */; };
-		04B91D2B27206C750096BAE6 /* StaffPicks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D2627206C750096BAE6 /* StaffPicks.swift */; };
 		04B91D2C27206C750096BAE6 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D2727206C750096BAE6 /* ListViewModel.swift */; };
 		04B91D2E27206C900096BAE6 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D2D27206C900096BAE6 /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040A2FE12723021F00740A5F /* StaffPicks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffPicks.swift; sourceTree = "<group>"; };
 		046E2536272091B30006ACCA /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		046E253827209F440006ACCA /* LocationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModelType.swift; sourceTree = "<group>"; };
 		046E253A2720B5180006ACCA /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		04B91D11272066160096BAE6 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		04B91D2427206C750096BAE6 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		04B91D2527206C750096BAE6 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
-		04B91D2627206C750096BAE6 /* StaffPicks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffPicks.swift; sourceTree = "<group>"; };
 		04B91D2727206C750096BAE6 /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		04B91D2D27206C900096BAE6 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +170,7 @@
 				046E253827209F440006ACCA /* LocationViewModelType.swift */,
 				04B91D0F272066160096BAE6 /* ViewPresentable.swift */,
 				04B91D10272066160096BAE6 /* List.swift */,
+				040A2FE12723021F00740A5F /* StaffPicks.swift */,
 				04B91D11272066160096BAE6 /* Endpoint.swift */,
 			);
 			path = Foundation;
@@ -191,7 +192,6 @@
 			children = (
 				04B91D2427206C750096BAE6 /* ListViewController.swift */,
 				04B91D2527206C750096BAE6 /* ItemCell.swift */,
-				04B91D2627206C750096BAE6 /* StaffPicks.swift */,
 				04B91D2727206C750096BAE6 /* ListViewModel.swift */,
 			);
 			path = List;
@@ -338,6 +338,7 @@
 			files = (
 				04B91D12272066160096BAE6 /* UIView+Extensions.swift in Sources */,
 				04B91D13272066160096BAE6 /* ListServiceType.swift in Sources */,
+				040A2FE22723021F00740A5F /* StaffPicks.swift in Sources */,
 				04B91D2C27206C750096BAE6 /* ListViewModel.swift in Sources */,
 				04B91D17272066160096BAE6 /* Endpoint.swift in Sources */,
 				04A072D5271F817A009712F7 /* AppDelegate.swift in Sources */,
@@ -348,7 +349,6 @@
 				046E253927209F440006ACCA /* LocationViewModelType.swift in Sources */,
 				04B91D2927206C750096BAE6 /* ListViewController.swift in Sources */,
 				04B91D14272066160096BAE6 /* ListViewModelType.swift in Sources */,
-				04B91D2B27206C750096BAE6 /* StaffPicks.swift in Sources */,
 				046E253B2720B5180006ACCA /* FlowCoordinator.swift in Sources */,
 				046E2537272091B30006ACCA /* LocationViewModel.swift in Sources */,
 				04A072D7271F817A009712F7 /* SceneDelegate.swift in Sources */,
