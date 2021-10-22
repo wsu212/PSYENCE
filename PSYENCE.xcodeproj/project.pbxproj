@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		040A2FE22723021F00740A5F /* StaffPicks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A2FE12723021F00740A5F /* StaffPicks.swift */; };
+		040A2FE427230E4E00740A5F /* MockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A2FE327230E4E00740A5F /* MockItem.swift */; };
+		040A2FE627230E6C00740A5F /* MockList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A2FE527230E6C00740A5F /* MockList.swift */; };
+		040A2FE827230E8600740A5F /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A2FE727230E8600740A5F /* MockService.swift */; };
 		046E2537272091B30006ACCA /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E2536272091B30006ACCA /* LocationViewModel.swift */; };
 		046E253927209F440006ACCA /* LocationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E253827209F440006ACCA /* LocationViewModelType.swift */; };
 		046E253B2720B5180006ACCA /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E253A2720B5180006ACCA /* FlowCoordinator.swift */; };
@@ -16,7 +19,7 @@
 		04A072D7271F817A009712F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A072D6271F817A009712F7 /* SceneDelegate.swift */; };
 		04A072DE271F817B009712F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A072DD271F817B009712F7 /* Assets.xcassets */; };
 		04A072E1271F817B009712F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A072DF271F817B009712F7 /* LaunchScreen.storyboard */; };
-		04A072EC271F817B009712F7 /* PSYENCETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A072EB271F817B009712F7 /* PSYENCETests.swift */; };
+		04A072EC271F817B009712F7 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A072EB271F817B009712F7 /* ListViewModelTests.swift */; };
 		04A072F6271F817B009712F7 /* PSYENCEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A072F5271F817B009712F7 /* PSYENCEUITests.swift */; };
 		04A072F8271F817B009712F7 /* PSYENCEUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A072F7271F817B009712F7 /* PSYENCEUITestsLaunchTests.swift */; };
 		04B91D12272066160096BAE6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D0C272066160096BAE6 /* UIView+Extensions.swift */; };
@@ -50,6 +53,9 @@
 
 /* Begin PBXFileReference section */
 		040A2FE12723021F00740A5F /* StaffPicks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffPicks.swift; sourceTree = "<group>"; };
+		040A2FE327230E4E00740A5F /* MockItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockItem.swift; sourceTree = "<group>"; };
+		040A2FE527230E6C00740A5F /* MockList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockList.swift; sourceTree = "<group>"; };
+		040A2FE727230E8600740A5F /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		046E2536272091B30006ACCA /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		046E253827209F440006ACCA /* LocationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModelType.swift; sourceTree = "<group>"; };
 		046E253A2720B5180006ACCA /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
@@ -61,7 +67,7 @@
 		04A072E0271F817B009712F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A072E2271F817B009712F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A072E7271F817B009712F7 /* PSYENCETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSYENCETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04A072EB271F817B009712F7 /* PSYENCETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSYENCETests.swift; sourceTree = "<group>"; };
+		04A072EB271F817B009712F7 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
 		04A072F1271F817B009712F7 /* PSYENCEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSYENCEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A072F5271F817B009712F7 /* PSYENCEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSYENCEUITests.swift; sourceTree = "<group>"; };
 		04A072F7271F817B009712F7 /* PSYENCEUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSYENCEUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -147,7 +153,10 @@
 		04A072EA271F817B009712F7 /* PSYENCETests */ = {
 			isa = PBXGroup;
 			children = (
-				04A072EB271F817B009712F7 /* PSYENCETests.swift */,
+				04A072EB271F817B009712F7 /* ListViewModelTests.swift */,
+				040A2FE327230E4E00740A5F /* MockItem.swift */,
+				040A2FE527230E6C00740A5F /* MockList.swift */,
+				040A2FE727230E8600740A5F /* MockService.swift */,
 			);
 			path = PSYENCETests;
 			sourceTree = "<group>";
@@ -360,7 +369,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A072EC271F817B009712F7 /* PSYENCETests.swift in Sources */,
+				040A2FE427230E4E00740A5F /* MockItem.swift in Sources */,
+				04A072EC271F817B009712F7 /* ListViewModelTests.swift in Sources */,
+				040A2FE627230E6C00740A5F /* MockList.swift in Sources */,
+				040A2FE827230E8600740A5F /* MockService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
