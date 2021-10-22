@@ -16,6 +16,7 @@ final class ListViewModel: ListViewModelType {
     var list: List? {
         didSet {
             if let items = list?.items {
+                let items = items.filter { $0.isValid }
                 self.items += items
             }
         }

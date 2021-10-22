@@ -10,6 +10,7 @@
 		046E2537272091B30006ACCA /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E2536272091B30006ACCA /* LocationViewModel.swift */; };
 		046E253927209F440006ACCA /* LocationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E253827209F440006ACCA /* LocationViewModelType.swift */; };
 		046E253B2720B5180006ACCA /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E253A2720B5180006ACCA /* FlowCoordinator.swift */; };
+		046E253E2720B8130006ACCA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E253D2720B8130006ACCA /* ProfileViewController.swift */; };
 		04A072D5271F817A009712F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A072D4271F817A009712F7 /* AppDelegate.swift */; };
 		04A072D7271F817A009712F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A072D6271F817A009712F7 /* SceneDelegate.swift */; };
 		04A072DE271F817B009712F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A072DD271F817B009712F7 /* Assets.xcassets */; };
@@ -20,7 +21,7 @@
 		04B91D12272066160096BAE6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D0C272066160096BAE6 /* UIView+Extensions.swift */; };
 		04B91D13272066160096BAE6 /* ListServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D0D272066160096BAE6 /* ListServiceType.swift */; };
 		04B91D14272066160096BAE6 /* ListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D0E272066160096BAE6 /* ListViewModelType.swift */; };
-		04B91D15272066160096BAE6 /* CellPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D0F272066160096BAE6 /* CellPresentable.swift */; };
+		04B91D15272066160096BAE6 /* ViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D0F272066160096BAE6 /* ViewPresentable.swift */; };
 		04B91D16272066160096BAE6 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D10272066160096BAE6 /* List.swift */; };
 		04B91D17272066160096BAE6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D11272066160096BAE6 /* Endpoint.swift */; };
 		04B91D2927206C750096BAE6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91D2427206C750096BAE6 /* ListViewController.swift */; };
@@ -51,6 +52,7 @@
 		046E2536272091B30006ACCA /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		046E253827209F440006ACCA /* LocationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModelType.swift; sourceTree = "<group>"; };
 		046E253A2720B5180006ACCA /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		046E253D2720B8130006ACCA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		04A072D1271F8179009712F7 /* PSYENCE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSYENCE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A072D4271F817A009712F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A072D6271F817A009712F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 		04B91D0C272066160096BAE6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		04B91D0D272066160096BAE6 /* ListServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListServiceType.swift; sourceTree = "<group>"; };
 		04B91D0E272066160096BAE6 /* ListViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModelType.swift; sourceTree = "<group>"; };
-		04B91D0F272066160096BAE6 /* CellPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellPresentable.swift; sourceTree = "<group>"; };
+		04B91D0F272066160096BAE6 /* ViewPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPresentable.swift; sourceTree = "<group>"; };
 		04B91D10272066160096BAE6 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		04B91D11272066160096BAE6 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		04B91D2427206C750096BAE6 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046E253C2720B8050006ACCA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				046E253D2720B8130006ACCA /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		04A072C8271F8179009712F7 = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +168,7 @@
 				04B91D0D272066160096BAE6 /* ListServiceType.swift */,
 				04B91D0E272066160096BAE6 /* ListViewModelType.swift */,
 				046E253827209F440006ACCA /* LocationViewModelType.swift */,
-				04B91D0F272066160096BAE6 /* CellPresentable.swift */,
+				04B91D0F272066160096BAE6 /* ViewPresentable.swift */,
 				04B91D10272066160096BAE6 /* List.swift */,
 				04B91D11272066160096BAE6 /* Endpoint.swift */,
 			);
@@ -170,6 +180,7 @@
 			children = (
 				04B91D2327206C750096BAE6 /* List */,
 				04B91D2827206C750096BAE6 /* Map */,
+				046E253C2720B8050006ACCA /* Profile */,
 				046E253A2720B5180006ACCA /* FlowCoordinator.swift */,
 			);
 			path = Feature;
@@ -331,7 +342,8 @@
 				04B91D17272066160096BAE6 /* Endpoint.swift in Sources */,
 				04A072D5271F817A009712F7 /* AppDelegate.swift in Sources */,
 				04B91D2A27206C750096BAE6 /* ItemCell.swift in Sources */,
-				04B91D15272066160096BAE6 /* CellPresentable.swift in Sources */,
+				04B91D15272066160096BAE6 /* ViewPresentable.swift in Sources */,
+				046E253E2720B8130006ACCA /* ProfileViewController.swift in Sources */,
 				04B91D2E27206C900096BAE6 /* LocationViewController.swift in Sources */,
 				046E253927209F440006ACCA /* LocationViewModelType.swift in Sources */,
 				04B91D2927206C750096BAE6 /* ListViewController.swift in Sources */,

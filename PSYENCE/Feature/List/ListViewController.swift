@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ListViewControllerDelegate: AnyObject {
-    func userDidTapPhotoTaken(by user: Staff)
+    func userDidTapPhotoTaken(by author: Author)
 }
 
 class ListViewController: UIViewController {
@@ -47,7 +47,6 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
         title = viewModel.title
         configureSubviews()
-        configureConstraints()
         configureBindings()
         
         viewModel.getList()
@@ -62,9 +61,7 @@ class ListViewController: UIViewController {
         spinner.startAnimating()
         spinner.frame = CGRect(x: 0.0, y: 0.0, width: tableView.frame.width, height: 44.0)
         tableView.tableFooterView = spinner
-    }
-    
-    private func configureConstraints() {
+        
         tableView.pin(to: view)
     }
     
@@ -118,8 +115,8 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let user = viewModel.item(at: indexPath.row)?.user {
-            self.delegate?.userDidTapPhotoTaken(by: user)
+        if let author = viewModel.item(at: indexPath.row)?.author {
+            self.delegate?.userDidTapPhotoTaken(by: author)
         }
     }
 }

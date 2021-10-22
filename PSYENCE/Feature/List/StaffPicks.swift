@@ -39,11 +39,11 @@ struct Video: Decodable {
     var width: Int?
     var language: String?
     var height: Int?
-    var user: Staff?
+    var user: Author?
     var pictures: Pictures?
 }
 
-struct Staff: Decodable {
+struct Author: Decodable {
     var uri: String?
     var name: String?
     var link: String?
@@ -87,8 +87,18 @@ struct PictureSize: Decodable {
 
 extension Video: Item {
     var imageURL: URL? {
-        guard let urlString = self.pictures?.sizes?.last?.link else { return nil }
-        return .init(string: urlString)
+        return pictures?.imageURL
+    }
+    
+    var author: Author? {
+        user
+    }
+    
+    var isValid: Bool {
+        guard let locationDetails = user?.locationDetails else {
+            return false
+        }
+        return locationDetails.latitude != nil && locationDetails.longitude != nil
     }
 }
 
@@ -99,5 +109,12 @@ extension StaffPicks: List {
     
     var items: [Item] {
         videos
+    }
+}
+
+extension Pictures {
+    var imageURL: URL? {
+        guard let urlString = sizes?.last?.link else { return nil }
+        return .init(string: urlString)
     }
 }

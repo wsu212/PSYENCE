@@ -9,43 +9,49 @@ import UIKit
 import Foundation
 
 final class FlowCoordinator {
-    private var listViewController: ListViewController?
-    private var locationViewController: LocationViewController?
+    private var rootViewController: UIViewController?
     
     lazy var navigationController: UINavigationController? = {
-        guard let listViewController = listViewController else { return nil }
-        return .init(rootViewController: listViewController)
+        guard let rootViewController = rootViewController else { return nil }
+        return .init(rootViewController: rootViewController)
     }()
     
     func start() {
-        listViewController = makeListViewController()
+        rootViewController = makeListViewController()
     }
     
     private func makeListViewController() -> ListViewController {
         let service = ListService<StaffPicks>(endpoint: .staffpicks)
-        let viewModel = ListViewModel(title: "Images Feed", service: service)
+        let viewModel = ListViewModel(title: "Photos Feed", service: service)
         let viewController = ListViewController(viewModel: viewModel)
         viewController.delegate = self
         return viewController
     }
     
-    private func makeLocationViewController(user: Staff) -> LocationViewController {
-        let viewModel = LocationViewModel(user: user)
+    private func makeLocationViewController(author: Author) -> LocationViewController {
+        let viewModel = LocationViewModel(author: author)
         let viewController = LocationViewController(viewModel: viewModel)
         viewController.delegate = self
+        return viewController
+    }
+    
+    private func makeProfileViewController(author: Author) -> ProfileViewController {
+        let appearance = ProfileViewAppearance(titleAppearance: .profileTitle, subtitleAppearance: .profileSubtitle)
+        let viewController = ProfileViewController(author: author, appearance: appearance)
         return viewController
     }
 }
 
 extension FlowCoordinator: ListViewControllerDelegate {
-    func userDidTapPhotoTaken(by user: Staff) {
-        let vc = makeLocationViewController(user: user)
+    func userDidTapPhotoTaken(by author: Author) {
+        let vc = makeLocationViewController(author: author)
         navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 extension FlowCoordinator: LocationViewControllerDelegate {
-    func userDidTapAnnotation(user: Staff) {
-        print("**** \(user)")
+    func userDidTapAnnotation(author: Author) {
+        let vc = makeProfileViewController(author: author)
+        navigationController?.present(vc, animated: true, completion: nil)
     }
 }

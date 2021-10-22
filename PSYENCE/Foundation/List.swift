@@ -18,5 +18,6 @@ protocol Item {
     var description: String? { get }
     var imageURL: URL? { get }
     
-    var user: Staff? { get }
+    var author: Author? { get }
+    var isValid: Bool { get }
 }

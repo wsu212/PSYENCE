@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 
 protocol LocationViewControllerDelegate: AnyObject {
-    func userDidTapAnnotation(user: Staff)
+    func userDidTapAnnotation(author: Author)
 }
 
 class LocationViewController: UIViewController {
@@ -42,7 +42,6 @@ class LocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubviews()
-        configureConstraints()
         configureBindings()
         
         viewModel.findLocation()
@@ -52,9 +51,6 @@ class LocationViewController: UIViewController {
     
     private func configureSubviews() {
         view.addSubview(mapView)
-    }
-    
-    private func configureConstraints() {
         mapView.pin(to: view)
     }
     
@@ -64,8 +60,8 @@ class LocationViewController: UIViewController {
             self?.dropPin(on: location)
         }
         
-        viewModel.didAccessProfile = { [weak self] user in
-            self?.delegate?.userDidTapAnnotation(user: user)
+        viewModel.didAccessProfile = { [weak self] author in
+            self?.delegate?.userDidTapAnnotation(author: author)
         }
     }
     
@@ -92,5 +88,6 @@ class LocationViewController: UIViewController {
 extension LocationViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         viewModel.accessProfile()
+        mapView.annotations.forEach { mapView.deselectAnnotation($0, animated: true) }
     }
 }

@@ -11,27 +11,27 @@ import CoreLocation
 final class LocationViewModel: LocationViewModelType {
     
     var didFindLocation: ((CLLocation, CLLocationDistance) -> Void)?
-    var didAccessProfile: ((Staff) -> Void)?
-    
+    var didAccessProfile: ((Author) -> Void)?
+        
     private let locationDistance: CLLocationDistance = 1000
     
-    private let user: Staff
+    private let author: Author
         
     // MARK: - Initializer
     
-    init(user: Staff) {
-        self.user = user
+    init(author: Author) {
+        self.author = author
     }
     
     func findLocation() {
         guard
-            let latitude = user.locationDetails?.latitude,
-            let longitude = user.locationDetails?.longitude else { return }
+            let latitude = author.locationDetails?.latitude,
+            let longitude = author.locationDetails?.longitude else { return }
         let location = CLLocation(latitude: latitude, longitude: longitude)
         self.didFindLocation?(location, locationDistance)
     }
     
     func accessProfile() {
-        self.didAccessProfile?(user)
+        self.didAccessProfile?(author)
     }
 }
